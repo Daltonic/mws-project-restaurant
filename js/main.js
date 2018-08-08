@@ -21,6 +21,7 @@ fetchNeighborhoods = () => {
     if (error) { // Got an error
       console.error(error);
     } else {
+      //console.error(neighborhoods);
       self.neighborhoods = neighborhoods;
       fillNeighborhoodsHTML();
     }
@@ -78,7 +79,7 @@ initMap = () => {
         scrollWheelZoom: false
       });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token=pk.eyJ1IjoiZGFsdG9uaWMiLCJhIjoiY2prYmM1dTkxMDY1dDNrcWZxaGdvdmtqdiJ9.HokZpevhB6jU8xrZO2Bq2A', {
-    mapboxToken: '<your MAPBOX API KEY HERE>',
+    mapboxToken: 'pk.eyJ1IjoiZGFsdG9uaWMiLCJhIjoiY2prYmM1dTkxMDY1dDNrcWZxaGdvdmtqdiJ9.HokZpevhB6jU8xrZO2Bq2A',
     maxZoom: 18,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
       '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
