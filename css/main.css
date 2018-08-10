@@ -10,7 +10,7 @@ a {
 }
 
 a:hover, a:focus {
-	color: #3397db;
+	color: orange;
 	text-decoration: none;
 	transition: all .3s ease-in-out;
 }
@@ -149,7 +149,7 @@ footer span {
 }
 
 #restaurants-list li a:hover, #restaurants-list li a:focus {
-    background: #6baee8;
+    background: orange;
     box-shadow: 0 10px 30px 0 #b8b8b86e;
 }
 

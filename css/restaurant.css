@@ -92,6 +92,11 @@ footer a {
   letter-spacing: 3px;
 }
 
+footer a:hover, footer a:focus {
+  color: #3397db;
+  transition: all .3s ease-in-out;
+}
+
 footer span {
   font-weight: 200;
 }

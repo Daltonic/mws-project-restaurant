@@ -34,22 +34,6 @@ initMap = () => {
     }
   });
 }  
- 
-/* window.initMap = () => {
-  fetchRestaurantFromURL((error, restaurant) => {
-    if (error) { // Got an error!
-      console.error(error);
-    } else {
-      self.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 16,
-        center: restaurant.latlng,
-        scrollwheel: false
-      });
-      fillBreadcrumb();
-      DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
-    }
-  });
-} */
 
 /**
  * Get current restaurant from page URL.
@@ -109,8 +93,10 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+    row.setAttribute('role', 'row');
 
     const day = document.createElement('td');
+    day.setAttribute('role', 'cell');
     day.innerHTML = key;
     row.appendChild(day);
 
@@ -129,6 +115,9 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
   const title = document.createElement('h2');
   title.innerHTML = 'Reviews';
+  title.setAttribute('role', 'heading');
+  title.setAttribute('tabindex', 0);
+  title.setAttribute('title', `All reviews of this restaurant`);
   container.appendChild(title);
 
   if (!reviews) {
@@ -138,7 +127,7 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
     return;
   }
   const ul = document.getElementById('reviews-list');
-  ul.setAttribute('role', 'tablist');
+  ul.setAttribute('role', 'list');
   reviews.forEach(review => {
     ul.appendChild(createReviewHTML(review));
   });
@@ -150,10 +139,11 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
-  li.setAttribute('role', 'tab');
+  li.setAttribute('role', 'listitem');
   const name = document.createElement('p');
   name.innerHTML = review.name;
   li.setAttribute('class', 'shadow-effect');
+  li.setAttribute('tabindex', 0);
   name.setAttribute('class', 'reviewer-name');
   li.appendChild(name);
 
@@ -181,6 +171,7 @@ createReviewHTML = (review) => {
 fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
+  li.setAttribute('role', 'listitem');
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
 }

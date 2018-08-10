@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-NG">
 
 <head>
     <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
@@ -12,31 +12,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body role="body">
     <div class="wrapper">
-        <header>
-            <nav>
-                <h1><a href="/" role="logo">Restaurant Reviews</a></h1>
+        <header role="banner">
+            <nav role="navigation">
+                <h1 role="heading"><a href="/" role="link">Restaurant Reviews</a></h1>
             </nav>
         </header>
-        <main id="maincontent">
-            <section id="map-container">
-                <div id="map"></div>
+        <main id="maincontent" role="main">
+            <section id="map-container" role="region">
+                <div id="map" role="application" tabindex="0"></div>
             </section>
-            <section>
+            <section role="region">
                 <div class="filter-options">
-                    <h2>Filter Results</h2>
-                    <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
-                        <option value="all">All Neighborhoods</option>
+                    <h2 role="heading">Filter Results</h2>
+                    <select id="neighborhoods-select" role="combobox" name="neighborhoods" onchange="updateRestaurants()">
+                        <option value="all" role="option">All Neighborhoods</option>
                     </select>
-                    <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
-                        <option value="all">All Cuisines</option>
+                    <select id="cuisines-select" role="combobox" name="cuisines" onchange="updateRestaurants()">
+                        <option value="all" role="option">All Cuisines</option>
                     </select>
                 </div>
-                <ul id="restaurants-list" role="tablist"></ul>
+                <ul id="restaurants-list" role="list"></ul>
             </section>
         </main>
-        <footer id="footer">
+        <footer id="footer" role="contentinfo">
             Copyright (c) 2017 <a href="/" role="link"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
         </footer>
     </div>
