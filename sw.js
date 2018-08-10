@@ -6,10 +6,10 @@ self.addEventListener("install", event => {
    offlinePage,
    '/',
    "/restaurant.html",
-   "/css/**"
+   "/css/**",
    "/data/restaurants.json",
-   "/js/**"
-    '/img/**'
+   "/js/**",
+    '/img/**',
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.js',
     'https://unpkg.com/leaflet@1.3.1/dist/leaflet.css'
  ];
