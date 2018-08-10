@@ -341,6 +341,10 @@ header a:focus, #restaurants-list li a:focus {
   outline: none;
 }
 
+#map:focus, #map *:focus, #breadcrumb a:focus {
+  outline: 2px solid #3397db;
+}
+
 @media all and (max-width: 799px) {
   #reviews-container {
     padding: 1em 2.3em;
@@ -348,12 +352,18 @@ header a:focus, #restaurants-list li a:focus {
   .review-rating {
     background: #252831;
   }
+  #map:focus {
+    outline: 2px solid #3397db;
+  }
 }
 
 @media all and (max-width: 499px) {
   #reviews-container {
     padding: 1em 1.3em;
-  }  
+  }
+  #map:focus {
+    outline: 2px solid #252831;
+  }
 }
 
 @media all and (max-width: 399px) {
